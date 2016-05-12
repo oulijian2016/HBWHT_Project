@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="338" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="339" name="Entity" provider="JIUQI"/>
+	<bundle bundleID="332" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="333" name="Storage Plug-in"/>
+	<bundle bundleID="159" name="Storage Plug-in"/>
+	<bundle bundleID="330" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="158" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="331" name="Intf Plug-in"/>
+	<bundle bundleID="157" name="Intf Plug-in"/>
+	<bundle bundleID="336" name="Core" provider="Jiuqi"/>
+	<bundle bundleID="156" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="337" name="Service" provider="JIUQI"/>
+	<bundle bundleID="155" name="Ui Plug-in"/>
+	<bundle bundleID="334" name="Ui Plug-in"/>
+	<bundle bundleID="154" name="Storage Plug-in"/>
+	<bundle bundleID="335" name="Schedule" provider="Jiuqi"/>
+	<bundle bundleID="531" name="JdbcDrv-Dm" provider="Jiuqi">
+		<library name="."/>
+		<library name="Dm7JdbcDriver16.jar"/>
+	</bundle>
+	<bundle bundleID="152" name="bill-workflow-feedback" provider="JIUQI"/>
+	<bundle bundleID="530" name="JdbcDrv-Db2" provider="JIUQI">
+		<library name="."/>
+		<library name="db2jcc_license_cu.jar"/>
+		<library name="db2jcc.jar"/>
+	</bundle>
+	<bundle bundleID="153" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="150" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="151" name="Intf Plug-in"/>
+	<bundle bundleID="535" name="Core" provider="JIUQI"/>
+	<bundle bundleID="534" name="JdbcDrv-Sqlserver" provider="JIUQI">
+		<library name="."/>
+		<library name="sqljdbc4.jar"/>
+	</bundle>
+	<bundle bundleID="533" name="JdbcDrv-Oracle" provider="JIUQI">
+		<library name="."/>
+		<library name="ojdbc5.jar"/>
+		<library name="orai18n.jar"/>
+	</bundle>
+	<bundle bundleID="532" name="JdbcDrv-Mysql" provider="JIUQI">
+		<library name="."/>
+		<library name="mysql-connector-java-5.1.5-bin.jar"/>
+	</bundle>
+	<bundle bundleID="539" name="Custom Plug-in" provider="JIUQI"/>
+	<bundle bundleID="538" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="537" name="Reboot" provider="JIUQI"/>
+	<bundle bundleID="536" name="Dist" provider="JIUQI"/>
+	<bundle bundleID="202" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="349" name="D&amp;A BAP Solution Define Service Plug-in" provider="Beijing Join-Cheer Co.,LTD."/>
+	<bundle bundleID="203" name="Intf Plug-in"/>
+	<bundle bundleID="204" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="205" name="Storage Plug-in"/>
+	<bundle bundleID="200" name="Table Plug-in" provider="JIUQI"/>
+	<bundle bundleID="201" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="341" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="169" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="342" name="SimpleSchedulePocily" provider="Jiuqi"/>
+	<bundle bundleID="343" name="Impl Plug-in" provider="JIUQI"/>
+	<bundle bundleID="344" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="166" name="CI4 Core Impl Plug-in" provider="JIUQI"/>
+	<bundle bundleID="206" name="Ui Plug-in"/>
+	<bundle bundleID="345" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="165" name="Common Plug-in" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/jxl.jar"/>
+		<library name="lib/pinyin4j-2.5.0.jar"/>
+	</bundle>
+	<bundle bundleID="207" name="Common" provider="JIUQI"/>
+	<bundle bundleID="346" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="168" name="Intf Plug-in"/>
+	<bundle bundleID="208" name="Intf"/>
+	<bundle bundleID="347" name="Commonui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="167" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="209" name="Service" provider="JIUQI"/>
+	<bundle bundleID="348" name="D&amp;A BAP Solution Define Intf Plug-in" provider="Beijing Join-Cheer Co.,LTD."/>
+	<bundle bundleID="540" name="Custom_en" provider="JIUQI"/>
+	<bundle bundleID="409" name="Common" provider="JIUQI"/>
+	<bundle bundleID="161" name="Pageinate Plug-in" provider="JIUQI"/>
+	<bundle bundleID="3" name="涔呭叾璇硶琛ㄨ揪寮忕粍浠跺簱" provider="鍖椾含涔呭叾杞欢鑲′唤鏈夐檺鍏徃"/>
+	<bundle bundleID="408" name="Dna" provider="JIUQI"/>
+	<bundle bundleID="162" name="Common" provider="JIUQI"/>
+	<bundle bundleID="2" name="Type" provider="JIUQI"/>
+	<bundle bundleID="542" class="com.jiuqi.dna.ui.launch.internal.channels.http.Activator" name="Web Plug-in" provider="JIUQI">
+		<library name="lib/jcifs-1.3.14.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="163" name="Impl" provider="JIUQI"/>
+	<bundle bundleID="1" name="Chart" provider="JIUQI">
+		<library name="lib/jdom.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="541" class="com.jiuqi.dna.ui.engine.internal.Activator" name="鎺у埗寮曟搸" provider="JoinCheer"/>
+	<bundle bundleID="164" name="WebService" provider="JIUQI"/>
+	<bundle bundleID="544" class="com.jiuqi.dna.ui.lightweight2.Activator" name="Lightweight Plug-in" provider="JIUQI"/>
+	<bundle bundleID="405" name="Formula" provider="JIUQI"/>
+	<bundle bundleID="7" name="XData Framework" provider="JIUQI"/>
+	<bundle bundleID="543" class="com.jiuqi.dna.ui.launch.internal.Activator" name="鍚姩绠＄悊鎻掍欢" provider="JoinCheer"/>
+	<bundle bundleID="404" name="Core" provider="JIUQI"/>
+	<bundle bundleID="6" name="XData Extension" provider="JIUQI"/>
+	<bundle bundleID="546" class="com.jiuqi.dna.ui.platform.update.Activator" name="Update Plug-in" provider="JIUQI"/>
+	<bundle bundleID="407" name="Service" provider="JIUQI"/>
+	<bundle bundleID="5" name="DataPeriod Plug-in" provider="JIUQI"/>
+	<bundle bundleID="340" name="Manage" provider="Jiuqi"/>
+	<bundle bundleID="545" name="Monitor Plug-in" provider="JIUQI"/>
+	<bundle bundleID="406" name="Manage" provider="JIUQI"/>
+	<bundle bundleID="160" name="Ui Plug-in"/>
+	<bundle bundleID="4" name="Message" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/javax.activation_1.1.1.jar"/>
+		<library name="lib/javax.mail_1.4.3.jar"/>
+	</bundle>
+	<bundle bundleID="548" name="D&amp;A Robot" provider="JIUQI"/>
+	<bundle bundleID="401" name="BCP Mission Engine" provider="JIUQI"/>
+	<bundle bundleID="547" class="com.jiuqi.dna.ui.robot.runtime.Activator" name="Robot" provider="JIUQI"/>
+	<bundle bundleID="400" name="BCP Mission Core" provider="JIUQI"/>
+	<bundle bundleID="403" name="Extend" provider="JIUQI"/>
+	<bundle bundleID="9" name="XFlex S4J" provider="JIUQI"/>
+	<bundle bundleID="549" name="Testspeed" provider="JIUQI">
+		<library name="WEB-INF/lib/com.jiuqi.chart_1.0.0.jar"/>
+		<library name="WEB-INF/lib/com.jiuqi.xlib_1.1.0.jar"/>
+		<library name="WEB-INF/lib/jdom.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="402" name="Center" provider="JIUQI"/>
+	<bundle bundleID="8" name="Xdupont" provider="JIUQI"/>
+	<bundle bundleID="211" name="Ui"/>
+	<bundle bundleID="212" name="Core" provider="JIUQI"/>
+	<bundle bundleID="210" name="Storage"/>
+	<bundle bundleID="215" name="En_us" provider="JIUQI"/>
+	<bundle bundleID="318" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="216" name="Zh_cn" provider="JIUQI"/>
+	<bundle bundleID="319" name="Storage Plug-in"/>
+	<bundle bundleID="213" name="Service" provider="JIUQI"/>
+	<bundle bundleID="316" name="Common Plug-in"/>
+	<bundle bundleID="214" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="317" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="179" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="219" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="314" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="178" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="315" name="Execute Plug-in" provider="JIUQI">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="177" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="217" name="Lang" provider="JIUQI"/>
+	<bundle bundleID="312" name="Common" provider="JIUQI"/>
+	<bundle bundleID="176" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="218" name="Commom Plug-in" provider="JIUQI"/>
+	<bundle bundleID="313" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="310" name="D&amp;A BAP ReportDefine Storage Plug-in" provider="Beijing Join-Cheer Co.,LTD."/>
+	<bundle bundleID="311" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="513" name="Export4DNA" provider="JIUQI"/>
+	<bundle bundleID="418" name="Dist Dispatch" provider="JIUQI"/>
+	<bundle bundleID="170" name="Storage Plug-in"/>
+	<bundle bundleID="512" name="XAdaptor for DNA" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/java2html.jar"/>
+	</bundle>
+	<bundle bundleID="417" name="Basedata" provider="JIUQI"/>
+	<bundle bundleID="171" name="Ui Plug-in"/>
+	<bundle bundleID="511" name="Repository for Mori" provider="JIUQI"/>
+	<bundle bundleID="416" name="ImageDecorator" provider="JIUQI"/>
+	<bundle bundleID="510" name="Dna" provider="JIUQI"/>
+	<bundle bundleID="415" name="Setl Fragment" provider="JIUQI"/>
+	<bundle bundleID="174" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="175" name="Ui Plug-in"/>
+	<bundle bundleID="172" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="419" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="173" name="Portlet Plug-in" provider="JIUQI"/>
+	<bundle bundleID="410" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="519" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="518" name="Core" provider="JIUQI"/>
+	<bundle bundleID="517" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="414" name="Core-Privilege" provider="JIUQI"/>
+	<bundle bundleID="516" name="Core" provider="JIUQI"/>
+	<bundle bundleID="413" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="515" name="Xdesigner" provider="JIUQI"/>
+	<bundle bundleID="412" name="Manager" provider="JIUQI"/>
+	<bundle bundleID="514" name="Core" provider="JIUQI"/>
+	<bundle bundleID="411" name="Core" provider="JIUQI"/>
+	<bundle bundleID="220" name="LogManager Plug-in" provider="JIUQI"/>
+	<bundle bundleID="221" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="222" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="223" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="224" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="327" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="225" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="328" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="226" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="329" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="227" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="188" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="228" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="323" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="187" name="Service" provider="JIUQI"/>
+	<bundle bundleID="229" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="324" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="325" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="189" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="326" name="Common" provider="JIUQI"/>
+	<bundle bundleID="320" name="Ui Plug-in"/>
+	<bundle bundleID="321" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="322" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="522" name="XService for Dna" provider="JIUQI"/>
+	<bundle bundleID="427" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="521" name="XLib for Dna" provider="JIUQI"/>
+	<bundle bundleID="426" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="180" name="Datastructure Plug-in" provider="JIUQI"/>
+	<bundle bundleID="524" name="DNA Core Http" provider="JIUQI"/>
+	<bundle bundleID="429" name="Service" provider="JIUQI"/>
+	<bundle bundleID="181" name="Data Sum Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="523" name="CacheDistributed" provider="Jiuqi"/>
+	<bundle bundleID="428" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="182" name="Data Sum Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="183" name="Data Sum Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="184" name="datasum.ui" provider="JIUQI"/>
+	<bundle bundleID="520" name="Print_Converter" provider="JIUQI"/>
+	<bundle bundleID="185" name="Data Plug-in" provider="JIUQI"/>
+	<bundle bundleID="186" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="529" class="com.jiuqi.dna.core.impl.Activator" name="DNA CORE" provider="JIUQI">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="421" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="420" name="Service" provider="JIUQI"/>
+	<bundle bundleID="526" name="com.jiuqi.dna.core.manager" provider="JIUQI"/>
+	<bundle bundleID="423" name="Common" provider="JIUQI"/>
+	<bundle bundleID="525" class="com.jiuqi.dna.core.jetty.Activator" name="Jetty" provider="JIUQI"/>
+	<bundle bundleID="422" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="528" name="WebService Support For DNA" provider="JIUQI"/>
+	<bundle bundleID="425" name="Service" provider="JIUQI"/>
+	<bundle bundleID="527" name="Ojdbc6" provider="JIUQI"/>
+	<bundle bundleID="424" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="116" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="117" name="Ui" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/dd-plist.jar"/>
+		<library name="lib/jdom-2.0.1.jar"/>
+	</bundle>
+	<bundle bundleID="114" name="Rest" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/javax.ws.rs.jar"/>
+		<library name="lib/javax.xml.bind.jar"/>
+		<library name="lib/org.json.jar"/>
+		<library name="lib/org.restlet.example.jar"/>
+		<library name="lib/org.restlet.ext.jaxrs.jar"/>
+		<library name="lib/org.restlet.ext.json.jar"/>
+		<library name="lib/org.restlet.ext.servlet.jar"/>
+		<library name="lib/org.restlet.jar"/>
+		<library name="lib/jdom-2.0.1.jar"/>
+	</bundle>
+	<bundle bundleID="115" name="Service" provider="JIUQI"/>
+	<bundle bundleID="112" name="Client" provider="JIUQI"/>
+	<bundle bundleID="113" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="110" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="111" name="Adapter" provider="JIUQI"/>
+	<bundle bundleID="118" name="AppCenter" provider="JIUQI"/>
+	<bundle bundleID="119" name="D&amp;A BAP About Plug-in" provider="JIUQI"/>
+	<bundle bundleID="435" name="Service" provider="JIUQI"/>
+	<bundle bundleID="436" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="433" name="Ios" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/bcprov-jdk15-146.jar"/>
+		<library name="lib/JavaPNS_2.2.jar"/>
+		<library name="lib/log4j-1.2.15.jar"/>
+	</bundle>
+	<bundle bundleID="434" name="Queue" provider="JIUQI"/>
+	<bundle bundleID="431" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="432" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="430" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="439" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="437" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="438" name="Service" provider="JIUQI"/>
+	<bundle bundleID="125" name="Service" provider="JIUQI"/>
+	<bundle bundleID="126" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="127" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="300" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="128" name="Set" provider="JIUQI"/>
+	<bundle bundleID="121" name="Service" provider="Jiuqi"/>
+	<bundle bundleID="302" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="122" name="Ui" provider="Jiuqi"/>
+	<bundle bundleID="301" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="123" name="Defaults" provider="Jiuqi"/>
+	<bundle bundleID="304" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="124" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="303" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="306" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="305" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="308" name="D&amp;A BAP Report Form Define Intf Plug-in" provider="Beijing Join-Cheer Software Co.,LTD."/>
+	<bundle bundleID="307" name="Commonui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="129" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="309" name="D&amp;A BAP Reportdefine Plug-in" provider="BeiJing Join-Cheer Software Co.,LTD."/>
+	<bundle bundleID="444" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="445" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="446" name="Define" provider="JIUQI"/>
+	<bundle bundleID="447" name="Core" provider="JIUQI"/>
+	<bundle bundleID="440" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="441" name="Registe" provider="JIUQI"/>
+	<bundle bundleID="442" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="443" name="Service" provider="JIUQI"/>
+	<bundle bundleID="120" name="AsyncGatherCore" provider="Jiuqi"/>
+	<bundle bundleID="448" name="Dna" provider="JIUQI"/>
+	<bundle bundleID="449" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="134" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="135" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="132" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="133" name="Auth Fragment" provider="JIUQI"/>
+	<bundle bundleID="138" name="Service" provider="JIUQI"/>
+	<bundle bundleID="139" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="136" name="Common" provider="JIUQI"/>
+	<bundle bundleID="137" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="450" name="Core" provider="JIUQI"/>
+	<bundle bundleID="453" name="Core" provider="JIUQI"/>
+	<bundle bundleID="454" name="Manage" provider="JIUQI"/>
+	<bundle bundleID="451" name="com.jiuqi.dna.sdp.customquery.manage" provider="JIUQI"/>
+	<bundle bundleID="452" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="457" name="com.jiuqi.dna.sdp.todolist.manage" provider="JIUQI"/>
+	<bundle bundleID="458" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="558" name="Desktop Plug-in" provider="JIUQI"/>
+	<bundle bundleID="455" name="Common" provider="JIUQI"/>
+	<bundle bundleID="559" name="Browser2" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/yuicompressor-2.4.2.jar"/>
+	</bundle>
+	<bundle bundleID="456" name="Core" provider="JIUQI"/>
+	<bundle bundleID="556" name="Sr" provider="JIUQI"/>
+	<bundle bundleID="557" name="Browser Plug-in" provider="JIUQI"/>
+	<bundle bundleID="554" name="Flat" provider="JIUQI"/>
+	<bundle bundleID="459" name="Designpanel" provider="JIUQI"/>
+	<bundle bundleID="555" name="Sky" provider="JIUQI"/>
+	<bundle bundleID="552" name="Ole Plug-in" provider="JIUQI"/>
+	<bundle bundleID="131" name="Authority Plug-in" provider="JIUQI"/>
+	<bundle bundleID="553" name="Filter" provider="JIUQI"/>
+	<bundle bundleID="130" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="550" name="Gddx" provider="JIUQI"/>
+	<bundle bundleID="551" name="Flash Plug-in" provider="JIUQI"/>
+	<bundle bundleID="143" name="鍩虹鏁版嵁閫夋嫨鎺т欢鎻掍欢" provider="涔呭叾"/>
+	<bundle bundleID="144" name="鍩虹鏁版嵁瀹氫箟鏈嶅姟鎻掍欢" provider="涔呭叾"/>
+	<bundle bundleID="560" name="Desktop Plug-in" provider="JIUQI"/>
+	<bundle bundleID="145" name="鍩虹鏁版嵁瀹氫箟鐣岄潰鎻掍欢" provider="涔呭叾"/>
+	<bundle bundleID="146" name="鍩虹鏁版嵁绠＄悊鏈嶅姟鎻掍欢" provider="涔呭叾"/>
+	<bundle bundleID="147" name="鍩虹鏁版嵁绠＄悊鐣岄潰鎻掍欢" provider="涔呭叾"/>
+	<bundle bundleID="148" name="鍩虹鏁版嵁妯″瀷鎻掍欢" provider="涔呭叾"/>
+	<bundle bundleID="149" name="Basewidget" provider="JIUQI"/>
+	<bundle bundleID="461" name="Basedata" provider="JIUQI"/>
+	<bundle bundleID="460" name="Pushmsg" provider="JIUQI"/>
+	<bundle bundleID="462" name="Bill" provider="JIUQI"/>
+	<bundle bundleID="463" name="Common" provider="JIUQI"/>
+	<bundle bundleID="464" name="Service" provider="JIUQI"/>
+	<bundle bundleID="465" name="Netlink" provider="JIUQI"/>
+	<bundle bundleID="466" name="Portal" provider="JIUQI"/>
+	<bundle bundleID="467" name="Pushmsg" provider="JIUQI"/>
+	<bundle bundleID="468" name="Query" provider="JIUQI"/>
+	<bundle bundleID="469" name="Service-Todo" provider="JIUQI"/>
+	<bundle bundleID="565" name="Member" provider="JIUQI"/>
+	<bundle bundleID="561" name="鎺т欢搴�" provider="JoinCheer"/>
+	<bundle bundleID="140" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="562" name="Wt_en" provider="JIUQI"/>
+	<bundle bundleID="563" name="Portal" provider="JIUQI"/>
+	<bundle bundleID="142" name="Workflow" provider="JIUQI"/>
+	<bundle bundleID="564" name="Portal" provider="JIUQI"/>
+	<bundle bundleID="141" name="Utils" provider="JIUQI"/>
+	<bundle bundleID="195" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="194" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="197" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="196" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="191" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="190" name="Dbbackup" provider="JIUQI"/>
+	<bundle bundleID="193" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="192" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="198" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="199" name="WorkflowManager" provider="JIUQI"/>
+	<bundle bundleID="505" name="Broker for Mori" provider="JIUQI"/>
+	<bundle bundleID="506" name="Mori&apos;s Core" provider="JIUQI"/>
+	<bundle bundleID="503" name="ESeal Interface" provider="JIUQI"/>
+	<bundle bundleID="504" name="ESeal Service" provider="JIUQI"/>
+	<bundle bundleID="509" name="Provider for Mori" provider="JIUQI"/>
+	<bundle bundleID="507" name="Drools for Mori" provider="JIUQI"/>
+	<bundle bundleID="508" name="Launch for Mori" provider="JIUQI"/>
+	<bundle bundleID="501" name="Graphical" provider="JIUQI"/>
+	<bundle bundleID="502" name="Workflow Monitor" provider="JIUQI"/>
+	<bundle bundleID="500" name="Workflow Engine Storage for D&amp;A" provider="JIUQI"/>
+	<bundle bundleID="35" name="New Library" provider="JIUQI"/>
+	<bundle bundleID="36" name="Apache CXF Bundle Jar" provider="The Apache Software Foundation"/>
+	<bundle bundleID="33" name="涔呭叾鍏敤浠ｇ爜搴�" provider="鍖椾含涔呭叾杞欢鑲′唤鏈夐檺鍏徃">
+		<library name="bcprov-jdk14-131.jar"/>
+		<library name="js.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="34" name="NLibrary DNA Support" provider="JIUQI"/>
+	<bundle bundleID="39" name="Java Mail" provider="Sun Microsystems"/>
+	<bundle bundleID="37" localization="plugin" name="Eclipse Compiler for Java" provider="Eclipse.org">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="38" localization="plugin" name="%bundleName" provider="%bundleProvider"/>
+	<bundle bundleID="43" name="Jaxb-xjc">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="42" name="JAXB-impl"/>
+	<bundle bundleID="41" localization="plugin" name="%bundleName" provider="%bundleProvider"/>
+	<bundle bundleID="40" localization="plugin" name="%bundleName" provider="%bundleProvider"/>
+	<bundle bundleID="22" name="Xgantt" provider="JIUQI">
+		<library name="lib/jdom.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="23" name="Xlib" provider="JIUQI"/>
+	<bundle bundleID="24" name="XService Framework" provider="JIUQI"/>
+	<bundle bundleID="25" name="ASM" provider="France Telecom R&amp;D"/>
+	<bundle bundleID="26" name="Axiom API" provider="The Apache Software Foundation"/>
+	<bundle bundleID="27" name="Axiom Impl" provider="The Apache Software Foundation"/>
+	<bundle bundleID="28" name="Protocol Buffer Java API" provider="googlecode.com"/>
+	<bundle bundleID="29" hasExtensibleAPI="true" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="icu-data.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="30" name="Jfr" provider="JIUQI">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="32" name="Mark" provider="JIUQI"/>
+	<bundle bundleID="31" name="Launcher Plug-in" provider="JIUQI"/>
+	<bundle bundleID="19" name="Process" provider="JIUQI"/>
+	<bundle bundleID="17" name="Barcode" provider="JIUQI">
+		<library name="lib/barcode4j.jar"/>
+		<library name="lib/zxing-core-1.7.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="18" name="XPrint_Process_Table" provider="JIUQI"/>
+	<bundle bundleID="15" name="Pdf" provider="JIUQI"/>
+	<bundle bundleID="16" name="Print" provider="JIUQI">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="13" name="XG-Highlight" provider="JIUQI"/>
+	<bundle bundleID="14" name="XG-Pdf" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/itextpdf-5.1.2.jar"/>
+		<library name="lib/itext-asian.jar"/>
+	</bundle>
+	<bundle bundleID="11" name="XG-Gef" provider="JIUQI"/>
+	<bundle bundleID="12" name="Grid" provider="JIUQI"/>
+	<bundle bundleID="21" name="XG-WT" provider="JIUQI"/>
+	<bundle bundleID="20" name="Svg" provider="JIUQI">
+		<library name="lib/batik-anim.jar"/>
+		<library name="lib/batik-awt-util.jar"/>
+		<library name="lib/batik-bridge.jar"/>
+		<library name="lib/batik-codec.jar"/>
+		<library name="lib/batik-css.jar"/>
+		<library name="lib/batik-dom.jar"/>
+		<library name="lib/batik-ext.jar"/>
+		<library name="lib/batik-extension.jar"/>
+		<library name="lib/batik-gvt.jar"/>
+		<library name="lib/batik-parser.jar"/>
+		<library name="lib/batik-script.jar"/>
+		<library name="lib/batik-svg-dom.jar"/>
+		<library name="lib/batik-svggen.jar"/>
+		<library name="lib/batik-transcoder.jar"/>
+		<library name="lib/batik-util.jar"/>
+		<library name="lib/batik-xml.jar"/>
+		<library name="lib/xalan-2.6.0.jar"/>
+		<library name="lib/xerces_2_5_0.jar"/>
+		<library name="lib/xml-apis-ext.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="10" name="XG-Draw2d" provider="JIUQI"/>
+	<bundle bundleID="79" class="org.eclipse.equinox.http.registry.internal.Activator" localization="plugin" name="%bundleName" provider="%providerName"/>
+	<bundle bundleID="78" class="org.eclipse.equinox.internal.ds.Activator" localization="plugin" name="%bundleName" provider="%bundleVendor"/>
+	<bundle bundleID="77" class="org.eclipse.equinox.console.command.adapter.Activator" localization="plugin" name="%bundleName" provider="%bundleVendor"/>
+	<bundle bundleID="82" class="org.eclipse.equinox.internal.jsp.jasper.Activator" localization="plugin" name="%bundleName" provider="%providerName"/>
+	<bundle bundleID="83" class="org.eclipse.equinox.log.internal.Activator" localization="plugin" name="%bundleName" provider="%providerName"/>
+	<bundle bundleID="80" class="org.eclipse.equinox.http.servlet.internal.Activator" localization="plugin" name="%bundleName" provider="%providerName"/>
+	<bundle bundleID="81" class="org.eclipse.equinox.internal.jsp.jasper.registry.Activator" localization="plugin" name="%bundleName" provider="%providerName"/>
+	<bundle bundleID="86" class="org.eclipse.equinox.internal.util.UtilActivator" localization="plugin" name="%bundleName" provider="%bundleVendor"/>
+	<bundle bundleID="87" class="org.eclipse.help.internal.HelpPlugin" localization="plugin" name="%help_plugin_name" provider="%providerName"/>
+	<bundle bundleID="84" class="org.eclipse.core.internal.preferences.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="85" class="org.eclipse.core.internal.registry.osgi.Activator" hasExtensibleAPI="true" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="runtime_registry_compatibility.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="67" class="org.eclipse.core.internal.databinding.observable.Activator" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="66" class="org.eclipse.core.internal.content.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="69" class="org.eclipse.core.internal.databinding.Activator" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="68" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="70" class="org.eclipse.core.internal.expressions.ExpressionPlugin" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="71" class="org.eclipse.core.internal.jobs.JobActivator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="72" class="org.eclipse.core.internal.runtime.auth.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="73" class="org.eclipse.core.internal.runtime.PlatformActivator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="74" class="org.eclipse.core.variables.VariablesPlugin" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="75" class="org.eclipse.equinox.internal.app.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="76" class="org.eclipse.core.internal.runtime.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="59" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="58" localization="plugin" name="%bundle.name" provider="%provider.name"/>
+	<bundle bundleID="57" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="56" name="org.apache.lucene"/>
+	<bundle bundleID="55" name="lucene Plug-in"/>
+	<bundle bundleID="64" class="org.eclipse.ant.core.AntCorePlugin" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="65" localization="plugin" name="%pluginName" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="62" name="Xmlbeans Plug-in">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="63" name="dom4j">
+		<library name="."/>
+		<library name="lib/jaxen-1.1.4.jar"/>
+		<library name="lib/jaxme-api-0.3.jar"/>
+		<library name="lib/jsr173_1.0_api.jar"/>
+		<library name="lib/msv-20030807.jar"/>
+		<library name="lib/pull-parser-2.1.10.jar"/>
+		<library name="lib/relaxngDatatype-20030807.jar"/>
+		<library name="lib/xpp3-1.1.3.3.jar"/>
+		<library name="lib/xsdlib-20030807.jar"/>
+	</bundle>
+	<bundle bundleID="60" name="Opercsv Plug-in"/>
+	<bundle bundleID="61" name="POI">
+		<library name="."/>
+		<library name="lib/commons-logging-1.1.jar"/>
+		<library name="lib/dom4j-1.6.1.jar"/>
+		<library name="lib/poi-excelant-3.8-20120326.jar"/>
+		<library name="lib/poi-ooxml-schemas-3.8-20120326.jar"/>
+		<library name="lib/poi-scratchpad-3.8-20120326.jar"/>
+		<library name="lib/stax-api-1.0.1.jar"/>
+		<library name="lib/xmlbeans-2.3.0.jar"/>
+		<library name="lib/org.apache.commons.codec_1.3.0.v201101211617.jar"/>
+	</bundle>
+	<bundle bundleID="49" name="4">
+		<library name="."/>
+		<library name="commons-logging-1.1.0.jar"/>
+	</bundle>
+	<bundle bundleID="48" localization="plugin" name="%bundleName" provider="%bundleProvider"/>
+	<bundle bundleID="45" name="mvel2"/>
+	<bundle bundleID="44" name="Jxl">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="47" name="ANTLR Runtime Plug-in" provider="Terence Parr"/>
+	<bundle bundleID="46" name="Neethi" provider="Apache Software Foundation"/>
+	<bundle bundleID="51" class="org.apache.felix.gogo.runtime.activator.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="52" class="org.apache.felix.gogo.shell.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="53" localization="plugin" name="%bundleName" provider="%bundleProvider">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="54" name="log4j Plug-in"/>
+	<bundle bundleID="50" class="org.apache.felix.gogo.command.Activator" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="487" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="281" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="486" name="Util Plug-in" provider="JIUQI"/>
+	<bundle bundleID="280" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="485" name="SPI Todo" provider="JIUQI"/>
+	<bundle bundleID="484" name="Query" provider="JIUQI"/>
+	<bundle bundleID="285" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="284" name="Portal Plug-in" provider="JIUQI"/>
+	<bundle bundleID="489" name="Chart" provider="JIUQI"/>
+	<bundle bundleID="283" name="Plantask Plug-in" provider="JIUQI"/>
+	<bundle bundleID="488" name="JiuQi Dashboard Plugin" provider="JIUQI">
+		<library name="lib/ChartDirector.jar"/>
+		<library name="lib/ezReport-3.1.0.jar"/>
+		<library name="lib/jxl.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="282" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="288" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="289" name="Service" provider="JIUQI"/>
+	<bundle bundleID="286" name="Service" provider="JIUQI"/>
+	<bundle bundleID="287" name="Singlechartview" provider="JIUQI"/>
+	<bundle bundleID="482" name="Portal" provider="JIUQI"/>
+	<bundle bundleID="483" name="Pushmsg" provider="JIUQI"/>
+	<bundle bundleID="480" name="SPI Framework" provider="JIUQI"/>
+	<bundle bundleID="481" name="Netlink" provider="JIUQI"/>
+	<bundle bundleID="474" name="Portal_en" provider="JIUQI"/>
+	<bundle bundleID="473" class="com.jiuqi.dna.ui.portal.internal.Activator" name="Portal Plug-in" provider="JIUQI"/>
+	<bundle bundleID="476" name="Basedata" provider="JIUQI"/>
+	<bundle bundleID="270" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="475" name="Pushmsg" provider="JIUQI"/>
+	<bundle bundleID="478" name="SPI Common" provider="JIUQI"/>
+	<bundle bundleID="272" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="477" name="Bill" provider="JIUQI"/>
+	<bundle bundleID="271" name="Service" provider="JIUQI"/>
+	<bundle bundleID="274" name="涔呭叾OCX鎻掍欢" provider="鍖椾含涔呭叾杞欢鑲′唤鏈夐檺鍏徃">
+		<library name="lib/com.jiuqi.dna.bap.weboffice.kinggrid_1.0.0.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="479" name="SPI - Driver for DNA" provider="JIUQI"/>
+	<bundle bundleID="273" name="Sysnotify" provider="JIUQI"/>
+	<bundle bundleID="275" name="Upgrade" provider="JIUQI"/>
+	<bundle bundleID="276" name="Org" provider="JIUQI"/>
+	<bundle bundleID="277" name="Service" provider="JIUQI"/>
+	<bundle bundleID="278" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="279" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="470" name="Authority" provider="JIUQI"/>
+	<bundle bundleID="471" name="Help" provider="JIUQI"/>
+	<bundle bundleID="472" name="Core" provider="JIUQI">
+		<library name="."/>
+		<library name="lib/bcmail-jdk15-1.45.jar"/>
+		<library name="lib/bcprov-jdk15-1.45.jar"/>
+		<library name="lib/iTrusCertAPI_2.9.2_jdk15.jar"/>
+	</bundle>
+	<bundle bundleID="109" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="108" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="107" name="Dataimport Plug-in" provider="JIUQI"/>
+	<bundle bundleID="106" name="Handler Plug-in" provider="JIUQI"/>
+	<bundle bundleID="105" name="Extend" provider="JIUQI"/>
+	<bundle bundleID="104" name="XmlSchema" provider="The Apache Software Foundation"/>
+	<bundle bundleID="103" name="org.apache.xml.resolver"/>
+	<bundle bundleID="102" name="WSDL4J"/>
+	<bundle bundleID="99" name="Soap">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="101" class="com.ctc.wstx.osgi.WstxBundleActivator" name="Woodstox XML-processor" provider="http://woodstox.codehaus.org"/>
+	<bundle bundleID="100" name="Stax2 API" provider="http://woodstox.codehaus.org"/>
+	<bundle bundleID="98" name="slf4j-log4j12" provider="SLF4J.ORG"/>
+	<bundle bundleID="97" name="slf4j-api" provider="SLF4J.ORG"/>
+	<bundle bundleID="391" name="Manage" provider="JIUQI"/>
+	<bundle bundleID="96" name="Rhino" provider="Mozilla"/>
+	<bundle bundleID="390" name="Core" provider="JIUQI"/>
+	<bundle bundleID="95" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="393" name="Core" provider="JIUQI"/>
+	<bundle bundleID="94" name="Json"/>
+	<bundle bundleID="392" name="Service" provider="JIUQI"/>
+	<bundle bundleID="93" localization="plugin" name="%pluginName" provider="%providerName"/>
+	<bundle bundleID="395" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="92" class="org.eclipse.osgi.framework.internal.core.SystemBundleActivator" hasExtensibleAPI="true" localization="systembundle" name="%systemBundle" provider="%eclipse.org"/>
+	<bundle bundleID="394" name="Manage" provider="JIUQI"/>
+	<bundle bundleID="91" localization="plugin" name="%osgiUtil" provider="%eclipse.org"/>
+	<bundle bundleID="90" localization="plugin" name="%osgiServices" provider="%eclipse.org"/>
+	<bundle bundleID="294" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="499" name="宸ヤ綔娴佸紩鎿庢湇鍔℃彃浠�" provider="涔呭叾杞欢鐮旂┒闄㈢粍浠堕儴"/>
+	<bundle bundleID="293" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="296" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="295" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="496" name="宸ヤ綔娴佸紩鎿�" provider="涔呭叾杞欢鐮旂┒闄㈢粍浠堕儴"/>
+	<bundle bundleID="290" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="495" name="宸ヤ綔娴佽璁″櫒" provider="涔呭叾杞欢鐮旂┒闄㈢粍浠堕儴"/>
+	<bundle bundleID="498" name="Workflow Engine Interface for D&amp;A" provider="JIUQI"/>
+	<bundle bundleID="292" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="497" name="Workflow Engine Common for D&amp;A" provider="JIUQI"/>
+	<bundle bundleID="291" name="Common" provider="JIUQI"/>
+	<bundle bundleID="491" name="Script Assitance Interface" provider="JIUQI"/>
+	<bundle bundleID="492" name="DNA Sql Assist Adaptor for DNA Only" provider="JIUQI"/>
+	<bundle bundleID="493" name="DNA SQL Assist Core" provider="JIUQI"/>
+	<bundle bundleID="494" name="DNA SQL Parser base on ANTLR" provider="JIUQI"/>
+	<bundle bundleID="297" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="298" name="Portlet" provider="JIUQI"/>
+	<bundle bundleID="299" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="490" name="PrintDesigner" provider="JIUQI"/>
+	<bundle bundleID="396" name="Core" provider="JIUQI">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="397" name="Manage" provider="JIUQI">
+		<library name="lib/sqlite-jdbc-3.7.2-javadoc.jar"/>
+		<library name="lib/sqlite-jdbc-3.7.2.jar"/>
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="398" name="BCP Job Core" provider="JIUQI"/>
+	<bundle bundleID="399" name="Job Engine" provider="JIUQI"/>
+	<bundle bundleID="88" name="Ajp"/>
+	<bundle bundleID="89" name="Jetty"/>
+	<bundle bundleID="240" name="Service" provider="JIUQI"/>
+	<bundle bundleID="241" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="383" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="384" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="381" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="382" name="Inl" provider="JIUQI"/>
+	<bundle bundleID="380" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="389" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="388" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="387" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="386" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="385" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="245" name="Service" provider="JIUQI"/>
+	<bundle bundleID="244" name="Core" provider="JIUQI"/>
+	<bundle bundleID="243" name="Entity" provider="JIUQI"/>
+	<bundle bundleID="242" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="249" name="Inl" provider="JIUQI"/>
+	<bundle bundleID="248" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="247" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="246" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="230" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="370" name="Table Plug-in" provider="JIUQI"/>
+	<bundle bundleID="371" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="372" name="Common" provider="JIUQI"/>
+	<bundle bundleID="373" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="379" name="Service" provider="JIUQI"/>
+	<bundle bundleID="239" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="378" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="375" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="374" name="Service" provider="JIUQI"/>
+	<bundle bundleID="377" name="Common" provider="JIUQI"/>
+	<bundle bundleID="376" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="232" name="Model Plug-in" provider="JIUQI"/>
+	<bundle bundleID="231" name="MetaDataService Plug-in" provider="JIUQI"/>
+	<bundle bundleID="234" name="鍩虹鏁版嵁绫诲瀷鐨勪富鏁版嵁鍚屾绠＄悊" provider="JIUQI"/>
+	<bundle bundleID="233" name="Application" provider="JIUQI"/>
+	<bundle bundleID="236" name="Org" provider="JIUQI"/>
+	<bundle bundleID="235" name="Framework" provider="JIUQI"/>
+	<bundle bundleID="238" name="Common" provider="JIUQI"/>
+	<bundle bundleID="237" name="Userauth" provider="JIUQI"/>
+	<bundle bundleID="262" name="Service"/>
+	<bundle bundleID="263" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="260" name="Language" provider="JIUQI"/>
+	<bundle bundleID="261" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="361" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="362" name="Service" provider="JIUQI"/>
+	<bundle bundleID="360" name="Systemoptions Plug-in" provider="JIUQI"/>
+	<bundle bundleID="366" name="Common" provider="JIUQI"/>
+	<bundle bundleID="365" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="364" name="Ui" provider="JIUQI"/>
+	<bundle bundleID="363" name="Storage" provider="JIUQI"/>
+	<bundle bundleID="369" name="Service" provider="JIUQI"/>
+	<bundle bundleID="368" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="367" name="Common" provider="JIUQI"/>
+	<bundle bundleID="269" name="Todoprovider" provider="JIUQI"/>
+	<bundle bundleID="268" name="Mailsender" provider="JIUQI"/>
+	<bundle bundleID="267" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="266" name="Message" provider="JIUQI"/>
+	<bundle bundleID="265" class="com.jiuqi.dna.bap.multorg.version.Activator" name="MultorgVersion" provider="JIUQI"/>
+	<bundle bundleID="264" name="Ui"/>
+	<bundle bundleID="250" name="com.jiuqi.dna.bap.model.relatedquery" provider="JIUQI"/>
+	<bundle bundleID="251" name="Ui Plug-in"/>
+	<bundle bundleID="252" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="350" name="D&amp;A BAP Solution Define Storage Plug-in" provider="Beijing Join-Cheer Software Co.,LTD."/>
+	<bundle bundleID="351" name="D&amp;A BAP Solution Define UI Plug-in" provider="Beijing Join-Cheer Software Co,.LTD."/>
+	<bundle bundleID="353" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="352" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="355" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="354" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="357" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="356" name="Common Plug-in" provider="JIUQI"/>
+	<bundle bundleID="359" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="358" name="Service Plug-in" provider="JIUQI"/>
+	<bundle bundleID="258" name="Common" provider="JIUQI"/>
+	<bundle bundleID="257" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="259" name="Intf" provider="JIUQI"/>
+	<bundle bundleID="254" name="Intf Plug-in" provider="JIUQI"/>
+	<bundle bundleID="253" name="Ui Plug-in" provider="JIUQI"/>
+	<bundle bundleID="256" name="Storage Plug-in" provider="JIUQI"/>
+	<bundle bundleID="255" name="Service Plug-in" provider="JIUQI"/>
+</map>

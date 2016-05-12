@@ -1,0 +1,217 @@
+package com.jiuqi.gov.acc.va.portal.login;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Properties;
+
+import com.jiuqi.dna.bap.common.constants.MsgDialogConst;
+import com.jiuqi.dna.bap.systemoptions.common.query.SystemOptionsQuery;
+import com.jiuqi.dna.core.Filter;
+import com.jiuqi.dna.core.User;
+import com.jiuqi.dna.core.situation.MessageListener;
+import com.jiuqi.dna.core.situation.MessageTransmitter;
+import com.jiuqi.dna.core.situation.Situation;
+import com.jiuqi.dna.core.spi.auth.ChangeSessionUserTask;
+import com.jiuqi.dna.core.spi.auth.LoginTask;
+import com.jiuqi.dna.ui.common.constants.JWT;
+import com.jiuqi.dna.ui.custom.WindowConfigure;
+import com.jiuqi.dna.ui.funcmgr.IFunction;
+import com.jiuqi.dna.ui.portal.LoginFinishMessage;
+import com.jiuqi.dna.ui.portal.LoginRequestMessage;
+import com.jiuqi.dna.ui.template.launch.TemplateLauncher;
+import com.jiuqi.dna.ui.template.launch.TemplateWindow;
+import com.jiuqi.dna.ui.viewpart.ViewPartDisplayWindow;
+import com.jiuqi.dna.ui.viewpart.ViewPartInstance;
+import com.jiuqi.dna.ui.wt.InfomationException;
+import com.jiuqi.dna.ui.wt.events.SelectionEvent;
+import com.jiuqi.dna.ui.wt.events.SelectionListener;
+import com.jiuqi.dna.ui.wt.events.WindowEvent;
+import com.jiuqi.dna.ui.wt.events.WindowListener;
+import com.jiuqi.dna.ui.wt.widgets.Composite;
+import com.jiuqi.dna.ui.wt.widgets.Display;
+import com.jiuqi.dna.ui.wt.widgets.MessageDialog;
+import com.jiuqi.dna.ui.wt.widgets.Page;
+import com.jiuqi.gov.acc.va.portal.option.NativeServerSystemOption;
+import com.jiuqi.gov.acc.va.portal.util.NetUtil;
+import com.jiuqi.gov.acc.va.portal.util.PropertiesUtil;
+import com.jiuqi.vacomm.env.EnvCenter;
+
+/**
+ * 登录控制逻辑
+ * @author huangrui
+ *
+ */
+public abstract class LoginHandlerPage extends Page {
+	
+	protected Date loginDate;
+
+	public LoginHandlerPage(Composite parent) {
+		super(parent);
+		this.getContext().regMessageListener(LoginRequestMessage.class,
+			new MessageListener<LoginRequestMessage>() {
+
+				public void onMessage(Situation situation,
+						LoginRequestMessage message,
+						MessageTransmitter<LoginRequestMessage> transmitter) {
+					
+					String userName = message.getName();
+					String userPwd = message.getPassword();
+					loginDate = message.getDate();
+
+					if (userName == null || userName.trim().length() == 0)
+						throw new RuntimeException("用户名不能为空。");
+					userName = userName.toLowerCase();
+					if (userPwd == null)
+						userPwd = "";
+					
+					if (message.getRequestType() == LoginRequestMessage.RequestType.Plain) {
+						//正常登录的情况，通过task验证用户合法
+						LoginTask loginTask = new LoginTask(userName, userPwd);
+						getContext().handle(loginTask);
+						if (null != loginTask.exceptionMessage)
+							throw new RuntimeException(loginTask.exceptionMessage);
+					} else {
+						//单点登录的情况，只确认用户名存在，并缓存用户信息
+						User user = situation.find(User.class, userName);
+						if (user == null)
+							throw new RuntimeException("用户不存在。");
+						ChangeSessionUserTask session = new ChangeSessionUserTask(user);
+						situation.handle(session);
+					}
+					finishLogin();
+				}
+			});
+	}
+
+	/**
+	 * 提交登录（在初始化和选择单位后提交）<br>
+	 * 派生类可在其中增加其它控制逻辑
+	 */
+	protected void finishLogin() {
+		doFinishLogin();
+	}
+	
+	/**
+	 * 全部登录检查完成后提交登录
+	 */
+	protected final void doFinishLogin() {
+		try {
+			LoginInfo info = getLoginInfo();
+			if (info != null) {
+				LoginTools.updateLoginInfo(info);
+				try{
+					if(LoginTools.isExistYSXMNoReLation(getContext())){
+						final IFunction function = getFuncByDescription("项目");
+						if (function == null) {
+							MessageDialog.alert("存在未关联的预算项目，请打开\"基础数据-项目\"，在\n预算项目字段处进行关联！ ");
+						}else{
+							MessageDialog.alert("存在未关联的预算项目，请点击\"确认\"打开项目基础数据进行关联！ ").addSelectionListener(new SelectionListener() {
+								
+								public void widgetSelected(SelectionEvent arg0) {
+									turnToXMFunction( function );
+									
+								}
+							});
+						}
+					}else if(LoginTools.isExistZYXMNoReLation(getContext())){//如果有专业项目未关联，给出提示，深度开发个性化需求
+						MessageDialog.alert("存在未关联的专业项目，请打开\"基础数据-项目\"，在\n专业项目字段处进行关联！ ");
+						
+					}
+					
+					
+				}catch(Throwable e){
+					e.printStackTrace();
+				}
+				if (PropertiesUtil.isSingleVersion() && info.getUserType() == UserType.ADMIN) {//单机版并且是系统管理员时
+					System.setProperty("isSingleVersion", "true");
+				}
+				getContext().bubbleMessage(new LoginFinishMessage());
+			}
+		} catch (Throwable t) {
+			getContext().bubbleMessage(new LoginFinishMessage(t));
+		}
+	}
+	/**
+	 * 根据描述获取功能
+	 * @return
+	 */
+	private IFunction getFuncByDescription(String description){
+		List<IFunction>	 functionList=getContext().getList(IFunction.class);
+		for(IFunction func:functionList){
+			if(description.equals(func.getDescription())){
+				return func;
+			}
+		}
+		return null;
+	}
+	/**
+	 * 跳转至项目基础数据   功能描述必须为“项目”
+	 */
+	private void turnToXMFunction(IFunction function ){
+		if(function!=null){
+			ViewPartInstance viewPartInstance=(ViewPartInstance) function;
+			WindowConfigure configure=new WindowConfigure();
+			configure.dialogStyle=JWT.MAXIMUM|JWT.MODAL|JWT.CLOSE;
+			ViewPartDisplayWindow window=new ViewPartDisplayWindow(configure,viewPartInstance);
+			window.setMaximum(true);
+		}
+		
+	}
+	/**
+	 * 最大化打开功能界面
+	 */
+	protected void openMaxWindow(){
+		IFunction function=null;
+		List<IFunction> functions=getContext().getList(IFunction.class);
+		for(IFunction functionTemp:functions){
+			if(functionTemp!=null&&PropertiesUtil.default_mgr_name.equals(functionTemp.getFlag())){
+				function=functionTemp;
+				break;
+			}
+		}
+		if (function == null) {
+			MessageDialog.alert(MsgDialogConst.MSG_TITLE_HINT, "无法打开，请确认是否配置了开账功能。");
+			return ;
+		}
+		ViewPartInstance viewPartInstance=(ViewPartInstance) function;
+		WindowConfigure configure=new WindowConfigure();
+		configure.dialogStyle=JWT.MODAL;
+		ViewPartDisplayWindow window=new ViewPartDisplayWindow(configure,viewPartInstance);
+		window.setTitle("系统开账导航");
+		window.setMaximum(true);
+		getContext().bubbleMessage(new LoginFinishMessage());
+	}
+
+	/**
+	 * 返回登录信息，如果返回null意味暂时不完成登录
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	protected abstract LoginInfo getLoginInfo() throws Exception;
+	
+	/**
+	 * 校验是否单机版本（单机版本只能本地访问）
+	 */
+	protected void checkSingleVersion() {
+		if (PropertiesUtil.isSingleVersion()) {//单机版时
+			//----------add by xzb 2014-08-04 是否允许非本机访问单机版-------
+			boolean isAllow = false;
+			if(SystemOptionsQuery.hasValue(NativeServerSystemOption.OPTION_STANALONE)){
+				isAllow = SystemOptionsQuery.getBoolean(NativeServerSystemOption.OPTION_STANALONE);
+			}
+			if(isAllow){
+				return;
+			}
+			//------------------end of add-------------------------------
+			//客户端ip
+			String clientIP = getContext().getLogin().getRemoteInfo().getRemoteAddr();
+			if(!"127.0.0.1".equals(clientIP)){
+				if(!clientIP.equals(NetUtil.getHostAddress())){//如果非本机则不让登录
+					throw new InfomationException("非本机服务不能登录！");
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,7 @@
+package com.jiuqi.hbswht.member.extAction;
+
+import com.jiuqi.dna.bap.bill.common.action.IWorkFlowAction;
+
+public class ExtAgreeAction implements IWorkFlowAction{
+
+}

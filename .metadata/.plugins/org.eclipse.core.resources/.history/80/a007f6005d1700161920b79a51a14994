@@ -1,0 +1,6 @@
+package com.jiuqi.hbswht.portal.viewpart;
+
+public class HbwhtContributorSettingViewPartDefine extends
+ConfigurableViewPartDefine{
+
+}

@@ -1,0 +1,9 @@
+package com.jiuqi.hbswht.member.constant;
+
+public class WhtConstant {
+	/**
+	 * 目标说明子表
+	 */
+	public static String T_ZTMBZB = "HBWHT_ZTMBZB";
+	public static String F_MBSM = "MBSM";
+}

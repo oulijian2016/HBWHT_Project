@@ -1,0 +1,5 @@
+package com.jiuqi.hbswht.portal.contributor;
+
+public class HbwhtPortalPageContributor extends PortalPageContributor{
+
+}

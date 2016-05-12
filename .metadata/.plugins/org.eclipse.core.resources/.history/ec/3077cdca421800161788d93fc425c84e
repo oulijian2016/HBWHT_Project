@@ -1,0 +1,86 @@
+package com.jiuqi.gov.acc.va.portal.external;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
+import com.jiuqi.dna.core.type.GUID;
+import com.jiuqi.dna.ui.common.DataObject;
+import com.jiuqi.dna.ui.setting.MsgLoadSetting;
+import com.jiuqi.dna.ui.viewpart.MsgClose;
+import com.jiuqi.dna.ui.wt.InfomationException;
+import com.jiuqi.dna.ui.wt.graphics.CssStyles;
+import com.jiuqi.dna.ui.wt.layouts.FillLayout;
+import com.jiuqi.dna.ui.wt.widgets.Browser;
+import com.jiuqi.dna.ui.wt.widgets.Composite;
+import com.jiuqi.dna.ui.wt.widgets.Display;
+import com.jiuqi.dna.ui.wt.widgets.Page;
+//import com.jiuqi.vacomm.env.EnvCenter;
+//import com.jiuqi.vacomm.env.FUnit;
+//import com.jiuqi.vacomm.utils.sys.Timer;
+
+/**
+ * GMC外部资源界面
+ * 
+ * @author huangrui
+ *
+ */
+public class ExternalResourceViewPage extends Page {
+
+	public ExternalResourceViewPage(Composite parent) {
+		super(parent);
+		MsgLoadSetting<ExternalResourceViewDefine> msg = new MsgLoadSetting<ExternalResourceViewDefine>();
+		this.getContext().bubbleMessage(msg);
+		DataObject dataObject = msg.getDataObject();
+		if (dataObject == null)
+			throw new InfomationException("没有配置要打开的外部资源");
+
+		GUID resId = GUID.tryValueOf(dataObject
+				.getString(ExternalResourceViewDefine.PROPERTY_ID_RES_ID));
+		if (resId != null) {
+			String url = buildURL(resId);
+			if (dataObject.getBoolean2(
+					ExternalResourceViewDefine.PROPERTY_ID_POPUP, false)) {
+				openInBrowserWindow(url);
+			} else {
+				openInComposite(url);
+			}
+		}
+	}
+
+	private void openInBrowserWindow(String url) {
+//		Display.getCurrent().openUrl(url);
+//		getContext().bubbleMessage(new MsgLazyClose());
+//		new Timer(1, 1) {
+//			@Override
+//			protected void onTimer(long time) {
+//				getContext().bubbleMessage(new MsgClose());
+//			}
+//		};
+	}
+
+	private void openInComposite(String url) {
+		this.setLayout(new FillLayout());
+		Composite comp = new Composite(this);
+		comp.setLayout(new FillLayout());
+		Browser browser = new Browser(comp);
+		browser.setCssStyles(new CssStyles());
+		browser.setURL(url);
+	}
+
+	@SuppressWarnings("restriction")
+	private String buildURL(GUID resId) {
+//		String userName = EnvCenter.getCurrUser(getContext()).getLoginName();
+		try {
+//			userName = URLEncoder.encode(userName, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+		}
+//		String credentialId = com.jiuqi.dna.ui.wt.internal.CredentialRegistry
+//				.generate(userName);
+//		FUnit currUnit = EnvCenter.getCurrUnit(getContext());
+//		return String.format("/system-logon-external?credential=%s&resId=%s&userName=%s%s%s",
+//				credentialId, resId.toString(), userName,
+//				currUnit == null ? "" : "&extraArgument=unitCode;",
+//				currUnit == null ? "" : currUnit.getCode());
+	}
+
+}

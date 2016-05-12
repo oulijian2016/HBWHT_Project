@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.jiuqi.dna.bap.model.common.define.intf.ActionConst"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.bap.model.common.runtime.base.MessageDialogWrap"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.core.type.GUID"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.core.Context"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.core.da.DBCommand"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.bap.bill.common.model.BillCentre"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.bap.model.common.type.UIStyle"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.bap.bill.common.model.BillModel"/>
+<fullyQualifiedTypeName name="com.jiuqi.hbswht.portal.viewpart.HbwhtContributorSettingViewPartDefine"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.bap.bill.common.action.IWorkFlowAction"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.ui.wt.widgets.MessageDialog"/>
+<fullyQualifiedTypeName name="com.jiuqi.hbswht.member.constant.WhtConstant"/>
+<fullyQualifiedTypeName name="com.jiuqi.dna.bap.model.common.type.ModelState"/>
+</qualifiedTypeNameHistroy>
