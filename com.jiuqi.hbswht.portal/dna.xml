@@ -30,9 +30,9 @@
 			<!-- portlet name="portlet" class="com.jiuqi.dna.ui.XXPortlet" -->
 		</portlets>
 		<portal-datas>
-			<entry-data name="" path="meta/com/jiuqi/hbswht/portal/entry/hbwht.entry"/>
-			<entry-data name="manage" path="meta/com/jiuqi/hbswht/portal/entry/HbwhtManage.entry"/>
 			<contributor class="com.jiuqi.hbswht.portal.contributor.HbwhtPortalPageContributor"/>
+			<entry-data name="" path="meta/com/jiuqi/hbswht/portal/entry/Hbwht.entry"/>
+			<entry-data name="manage" path="meta/com/jiuqi/hbswht/portal/entry/HbwhtManage.entry"/>
 		</portal-datas>
 		<viewparts>
 			<viewpart type="sys-function" class="com.jiuqi.hbswht.portal.viewpart.HbwhtContributorSettingViewPartDefine"/>

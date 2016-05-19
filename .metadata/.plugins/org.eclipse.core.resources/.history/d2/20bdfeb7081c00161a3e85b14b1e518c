@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PortalEntry title="湖北文化厅项目管理信息系统" name="Hbwht" entry-page="login">
+	<description>湖北文化厅项目管理信息系统</description>
+	<PortalPage name="login" title="普通用户登录页" template="SYS_DefaultLoginTemplate" language="zh_CN">
+		<Param title="登录处理逻辑页面标识" value="BAP_LoginHandlerPageForUser" name="login-handler-page"/>
+		<Param title="登录成功转向" value="main" name="login-forward-page"/>
+	</PortalPage>
+</PortalEntry>

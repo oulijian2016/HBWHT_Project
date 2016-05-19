@@ -1,0 +1,426 @@
+package com.jiuqi.gov.acc.va.portal.sysinfo;
+
+import java.util.Collection;
+import java.util.List;
+
+import com.jiuqi.dna.bap.basedata.common.util.BaseDataCenter;
+import com.jiuqi.dna.bap.basedata.intf.facade.FBaseDataInfo;
+import com.jiuqi.dna.bap.multorg.common.orgimpl.AllOrgImpl;
+import com.jiuqi.dna.bap.multorg.common.util.OrgTypeOperUtil;
+import com.jiuqi.dna.bap.multorg.intf.orgtree.FOrgNode;
+import com.jiuqi.dna.ui.template.launch.TemplateWindow;
+import com.jiuqi.dna.ui.wt.events.ActionEvent;
+import com.jiuqi.dna.ui.wt.graphics.Point;
+import com.jiuqi.dna.ui.wt.graphics.Rectangle;
+import com.jiuqi.dna.ui.wt.grid.*;
+import com.jiuqi.dna.ui.wt.widgets.Browser;
+import com.jiuqi.dna.ui.wt.widgets.Composite;
+import com.jiuqi.dna.ui.wt.widgets.Form;
+import com.jiuqi.sm.acctbook.common.QueryMode;
+import com.jiuqi.sm.acctbook.common.provider.AcctBookProvider;
+import com.jiuqi.sm.acctbook.intf.facade.FAcctBook;
+import com.jiuqi.sm.acctbook.intf.facade.FAcctPeriod;
+import com.jiuqi.sm.acctbook.intf.facade.FModuleINAcctBook;
+//import com.jiuqi.sm.module.FModule;
+//import com.jiuqi.sm.module.ModuleCenter;
+import com.jiuqi.util.DateUtil;
+import com.jiuqi.vacomm.env.EnvCenter;
+import com.jiuqi.vacomm.env.FBook;
+import com.jiuqi.vacomm.env.FUnit;
+import com.jiuqi.vacomm.utils.CommonConst;
+
+public class SysInfoIntfPage<TControls extends SysInfoIntfPageControls> extends Form<SysInfoIntfPageControls> {
+
+	private FUnit unit;//组织机构
+	private FBook book;//账簿
+	private FAcctBook acctBook;//核算账簿
+	private Grid gridModule;
+	private Grid gridPeriod;
+	private AcctBookProvider acctBookProvider = new AcctBookProvider(getContext());
+	public SysInfoIntfPage(Composite parent) {
+		super(parent);
+		initPage();
+	}
+
+	private void initPage() {
+		initUnitInfo();
+		initBookInfo();
+		initSysVersionInfo();
+		initModule();
+		initPeriod();
+		setBorder();
+	}
+
+	private void setBorder() {
+		controls.cmp_3.setBorder(CommonConst.BORDER_DEFAULT);
+	}
+
+	/**
+	 * 初始系统信息
+	 */
+	private void initSysVersionInfo() {
+		
+		StringBuffer html = new StringBuffer();
+		html.append("<html>");
+		
+		html.append("<head>");
+		html.append("</head>");
+		
+		html.append(" <style type=\"text/css\">");
+		html.append("p.f { font-size: \"12px\"; font-family: \"宋体\";  }");
+		html.append("</style>");
+		
+		html.append("<body>");
+		
+		html.append("<font size=2px family=宋体 >");
+	
+		html.append("<p class=\"f\"; style=\"line-height:150%\" >BAP版本 ：         "+SysInfoService.getSystemVersion(false)+"<br>");
+		html.append("BAP编译时间："+SysInfoService.getSystemBuildTime(false)+"<br>");
+		html.append("VA6版本 ：         "+SysInfoService.getSystemVersion(true)+"<br>");
+		html.append("VA6编译时间："+SysInfoService.getSystemBuildTime(true)+"<br>");
+		html.append("JRE版本：          "+System.getProperty("java.version")+"</p>");
+		
+		html.append("</font>");
+		html.append("</body>");
+		
+		html.append("</html>");
+		Browser browser = new Browser(controls.cmp_3);
+		browser.setHTML(html.toString());
+	}
+
+	/**
+	 * 初始账簿信息
+	 */
+	private void initBookInfo() {
+		book = EnvCenter.getCurrBook(getContext());
+		if (book == null) {
+			return;
+		}
+		controls.lbl_bookName.setText(book.getBookName());
+		controls.lbl_currencyName.setText(book.getCurrencyName());
+		controls.lbl_exchangeRateName.setText(book.getExchangeRate().getTitle());
+		controls.lbl_subjectSchemaName.setText(book.getSubjectSchema().getTitle());
+		controls.lbl_periodSchemaName.setText(book.getPeriodSchemaName());
+	}
+
+	/**
+	 * 初始组织机构信息
+	 */
+	private void initUnitInfo() {
+		unit = EnvCenter.getCurrUnit(getContext());
+		if (unit == null) {
+			return ;
+		}
+		//组织机构名称
+		controls.lbl_unitName.setText(unit.getUnitName());
+		//组织结构类型
+		StringBuffer unitTypes = new StringBuffer();
+		AllOrgImpl allOrg = OrgTypeOperUtil.getAllOrgDataByObjId(getContext(), unit.getUnitId());
+		Collection<FOrgNode> nodes = allOrg.getNodeList();
+		for (FOrgNode node : nodes) {
+			if (!"MD_ORG".equals(node.getTableName())) {
+				if ("MD_FINORG".equals(node.getTableName())) {
+					try {
+						Object man = node.getFieldValue(getContext(), "ACCOUNTMASTER");
+						if (man != null) {
+							controls.lbl_man.setText(man.toString());
+						}
+					} catch (Exception e) {
+						//e.printStackTrace();
+					}					
+				}
+
+				FBaseDataInfo info = BaseDataCenter.findInfo(getContext(), node.getTableName());
+				unitTypes.append(info.getTitle());
+				unitTypes.append("；");
+			}
+		}
+		//去掉最后一个分号
+		if (unitTypes.indexOf("；")>0) {
+			unitTypes.setLength(unitTypes.length()-1);
+		}
+		controls.lbl_unitTypes.setText(unitTypes.toString());
+	}
+
+	/**
+	 * 初始会计期间信息
+	 */
+	private void initPeriod() {
+		//初始期间表格
+		initPeriodGrid();
+		//得到所选模块
+		FModuleINAcctBook module = getDefaultSelectedModule();
+		//设置当前期间
+		//initCurrPeriod(module);
+		//设置期间表格
+		fillPeriodGrid(module);
+		
+	}
+
+	/**
+	 * 填充会计期间表格
+	 * @param module
+	 */
+	private void fillPeriodGrid(FModuleINAcctBook module) {
+		if (module==null || gridPeriod==null) {
+			return;
+		}
+		//得到会计期间方案的
+		List<FAcctPeriod> resultList = getContext().getList(FAcctPeriod.class,book.getPeriodSchemaId(), Integer.valueOf(module.getMaxYear()));
+		for (FAcctPeriod fAcctPeriod : resultList) {
+			GridDataAccessor accessor = gridPeriod.getGridDataAccessor();
+			int rowCount = accessor.getRowCount();
+			accessor.insertRows(accessor.getRowCount(), 1);
+			rowCount++;
+			int rowIndex = rowCount-1;
+			
+			GridCellDataAccessor cell = accessor.getGridCellDataAccessor(0, rowIndex);
+			cell.setShowText(String.valueOf(fAcctPeriod.getPeriod()));
+			
+			cell = accessor.getGridCellDataAccessor(1, rowIndex);
+			cell.setShowText(DateUtil.date2String(fAcctPeriod.getStartDate()));
+			
+			cell = accessor.getGridCellDataAccessor(2, rowIndex);
+			cell.setShowText(DateUtil.date2String(fAcctPeriod.getEndDate()));
+		}
+	}
+
+//	/**
+//	 * 填充当前期间信息
+//	 * @param module
+//	 */
+//	private void initCurrPeriod(FModuleINAcctBook module) {
+//		if (module != null && module.isUse()) {
+//			controls.lbl_currYear.setText(String.valueOf(module.getMaxYear()));
+//			controls.lbl_currPeriod.setText(String.valueOf(module.getMaxPeriod()));
+//			FPeriod period = EnvCenter.getPeriodInfo(getContext(),unit.getUnitId(),book.getBookId(),module.getModuleID());
+//			controls.lbl_startPeriod.setText(String.valueOf(period.getYearMinPeriod(module.getMaxYear())));
+//		}else{
+//			controls.lbl_currYear.setText(null);
+//			controls.lbl_currPeriod.setText(null);
+//			controls.lbl_startPeriod.setText(null);
+//		}
+//	}
+	
+	/**
+	 * 取得当前选中模块
+	 * @return
+	 */
+	private FModuleINAcctBook getSelectedModule() {
+		Point point = gridModule.getCurrentCell();
+		if (acctBook != null && point != null) {
+			int rowNum = point.y;
+			FModuleINAcctBook module = (FModuleINAcctBook) gridModule.getGridDataAccessor()
+				         .getGridCellDataAccessor(0, rowNum).getData();
+			return module;
+		}
+		return null;
+	}
+	
+	/**
+	 * 取得默认选中模块
+	 * @return
+	 */
+	private FModuleINAcctBook getDefaultSelectedModule() {
+		int rowCount = gridModule.getGridDataAccessor().getRowCount();
+		if (acctBook != null && rowCount>1) {
+			Rectangle[] rctngls =  gridModule.getSelections();
+			if (rctngls != null && rctngls.length>0) {
+				Rectangle rctngl = rctngls[0];
+				int rowNum = rctngl.y;
+				FModuleINAcctBook module = (FModuleINAcctBook) gridModule.getGridDataAccessor()
+				         .getGridCellDataAccessor(0, rowNum).getData();
+				return module;
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * 初始期间表格
+	 */
+	private void initPeriodGrid() {
+		gridPeriod = new Grid(controls.cmp_5);
+		controls.cmp_5.setBorder(CommonConst.BORDER_DEFAULT);
+		gridPeriod.setSelectionMode(GridEnums.SelectionMode.SINGLE);
+		gridPeriod.setEditMode(GridEnums.EditMode.READONLY);		
+		
+		GridDataAccessor accessor = gridPeriod.getGridDataAccessor();
+		accessor.setColumnCount(3);
+		accessor.setRowCount(1);
+		// 设置选择列的宽度
+		accessor.setColumnWidth(0, 49);
+		accessor.setColumnWidth(1, 150);
+		accessor.setColumnWidth(2, 150);
+		accessor.getGridCellDataAccessor(0, 0).setShowText("会计期");
+		accessor.getGridCellDataAccessor(1, 0).setShowText("起始日期");
+		accessor.getGridCellDataAccessor(2, 0).setShowText("结束日期");
+	}
+
+	/**
+	 * 初始模块
+	 */
+	private void initModule() {
+		//初始模块表格
+		initModuleGrid();
+		
+		if (unit == null || book == null) {
+			return ;
+		}
+		//得到核算账簿
+		acctBook = acctBookProvider.getAcctBookByUnitAndBookID(unit.getUnitId(),book.getBookId());
+		
+		if (null != acctBook) {
+			//存在核算账簿
+			//得到核算账簿启用的模块
+			boolean isused = false;
+			List<FModuleINAcctBook> moduleInAcctBook = getContext().getList(FModuleINAcctBook.class,acctBook.getRECID(),QueryMode.Mode.Que_ModuleINAcctBook_ByAcctBookID);
+//			List<FModule> moduleList = ModuleCenter.getModules();
+//			for (FModule m: moduleList) {
+//				if (m.isBookSupport()) {
+//					for (FModuleINAcctBook acctBookModule : moduleInAcctBook) {
+//						if (m.getRecID().equals(acctBookModule.getModuleID())) {
+//							FModule module = ModuleCenter.getModuleByID(acctBookModule.getModuleID());
+//							fillModuleGrid(acctBookModule,module);
+//							isused = true;
+//							break;
+//						}
+//					}
+//				}
+//			}
+			
+			if (moduleInAcctBook != null && moduleInAcctBook.size()>0&&isused) {
+				setSelectModule();
+			}
+			
+		}else{
+			//不存在核算账簿
+			// nothing to do 
+		}
+	}
+
+	/**
+	 * 设置默认选中模块
+	 */
+	private void setSelectModule() {
+		gridModule.setCurrentCell(1, 1);
+		gridModule.setSelections(new Rectangle[]{new Rectangle(1,1,1,1)});
+	}
+
+	/**
+	 * 填充模块表格
+	 * @param acctBookModule
+	 * @param module
+	 */
+	private void fillModuleGrid(FModuleINAcctBook acctBookModule,FModule module) {
+		
+		GridDataAccessor accessor = gridModule.getGridDataAccessor();
+		int rowCount = accessor.getRowCount();
+		accessor.insertRows(accessor.getRowCount(), 1);
+		rowCount++;
+		int rowIndex = rowCount-1;
+		
+		GridCellDataAccessor cell = accessor.getGridCellDataAccessor(0, rowIndex);
+		cell.setShowText(String.valueOf(rowIndex));
+		cell.setData(acctBookModule);
+		
+		cell = accessor.getGridCellDataAccessor(1, rowIndex);
+		cell.setShowText(module.getStdName());
+		
+		cell = accessor.getGridCellDataAccessor(2, rowIndex);
+		cell.setShowText(String.valueOf(acctBookModule.getStartYear()));
+		
+		cell = accessor.getGridCellDataAccessor(3, rowIndex);
+		cell.setShowText(String.valueOf(acctBookModule.getStartPeriod()));
+		
+		cell = accessor.getGridCellDataAccessor(4, rowIndex);
+		cell.setShowText(String.valueOf(acctBookModule.getMaxYear()));
+		
+		cell = accessor.getGridCellDataAccessor(5, rowIndex);
+		cell.setShowText(String.valueOf(acctBookModule.getMaxPeriod()));
+		
+		cell = accessor.getGridCellDataAccessor(6, rowIndex);
+		String isUse = acctBookModule.isUse()?"已启用":"未启用";
+		cell.setShowText(isUse);
+		
+	}
+
+	/**
+	 * 初始模块表格
+	 */
+	private void initModuleGrid() {
+	    gridModule = new Grid(controls.cmp_4);
+	    controls.cmp_4.setBorder(CommonConst.BORDER_DEFAULT);
+	    gridModule.setEditMode(GridEnums.EditMode.READONLY);		
+	    
+	    gridModule.addGridListener(new GridListener() {
+			
+			public void currentCellChanged(GridEvent arg0) {
+				gridModuleChange();
+			}
+		});
+	    
+		GridDataAccessor accessor = gridModule.getGridDataAccessor();
+		accessor.setColumnCount(7);
+		accessor.setRowCount(1);
+		// 设置选择列的宽度 349
+		accessor.setColumnWidth(0, 45);
+		accessor.setColumnWidth(1, 50);
+		accessor.setColumnWidth(2, 50);
+		accessor.setColumnWidth(3, 50);
+		accessor.setColumnWidth(4, 50);
+		accessor.setColumnWidth(5, 50);
+		accessor.setColumnWidth(6, 54);
+		accessor.getGridCellDataAccessor(0, 0).setShowText("编号");
+		accessor.getGridCellDataAccessor(1, 0).setShowText("模块");
+		accessor.getGridCellDataAccessor(2, 0).setShowText("起始年");
+		accessor.getGridCellDataAccessor(3, 0).setShowText("起始期");
+		accessor.getGridCellDataAccessor(4, 0).setShowText("当前年");
+		accessor.getGridCellDataAccessor(5, 0).setShowText("当前期");
+		accessor.getGridCellDataAccessor(6, 0).setShowText("当前状态");
+	}
+
+	/**
+	 * 模块表格变化
+	 */
+	protected void gridModuleChange() {
+		
+		//设置选中行的背景色
+		
+		FModuleINAcctBook module = getSelectedModule();
+		//设置当前期间
+		//initCurrPeriod(module);
+		//重设表格
+		resetPeriodGrid();
+		//设置期间表格
+		fillPeriodGrid(module);
+	}
+
+	/**
+	 * 重设期间表格
+	 */
+	private void resetPeriodGrid() {
+		if (gridPeriod != null) {
+			GridDataAccessor accessor = gridPeriod.getGridDataAccessor();
+			if (accessor.getRowCount()>1) {
+				accessor.deleteRows(1,accessor.getRowCount()-1 );
+			}
+		}
+	}
+
+	/**
+	 * 关闭按钮
+	 * @param actionEvent
+	 */
+	protected void on_btn_2_Action(ActionEvent actionEvent) {
+		getContext().broadcastMessage(new TemplateWindow.CloseMessage());
+	}
+
+	/**
+	 * 导出按钮 赞不实现
+	 * @param actionEvent
+	 */
+	protected void on_btn_1_Action(ActionEvent actionEvent) {
+		getContext().broadcastMessage(new TemplateWindow.CloseMessage());
+	}
+}

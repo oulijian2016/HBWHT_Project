@@ -16,4 +16,5 @@
 <fullyQualifiedTypeName name="com.jiuqi.dna.ui.wt.widgets.MessageDialog"/>
 <fullyQualifiedTypeName name="com.jiuqi.hbswht.member.constant.WhtConstant"/>
 <fullyQualifiedTypeName name="com.jiuqi.dna.bap.model.common.type.ModelState"/>
+<fullyQualifiedTypeName name="com.jiuqi.xlib.utils.StringUtil"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,73 @@
+!SESSION 2016-05-12 21:38:59.782 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -dev file:D:/Project/hbwht/.metadata/.plugins/org.eclipse.pde.core/hbwht/dev.properties -os win32 -ws win32 -arch x86 -consoleLog -console
+
+!ENTRY com.jiuqi.gov.acc.va.portal 4 0 2016-05-12 21:39:27.423
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "com.jiuqi.gov.acc.va.portal_1.0.0 [1823]" could not be resolved. Reason: Missing Constraint: Require-Bundle: com.jiuqi.vacomm.utils.intf; bundle-version="0.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1332)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1316)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1177)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.osgi 4 0 2016-05-12 21:39:27.439
+!MESSAGE Bundle initial@reference:file:../../Project/hbwht/com.jiuqi.gov.acc.va.portal/ was not resolved.
+
+!ENTRY org.eclipse.osgi 2 0 2016-05-12 21:39:27.533
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2016-05-12 21:39:27.533
+!MESSAGE Bundle initial@reference:file:../../Project/hbwht/com.jiuqi.gov.acc.va.portal/ was not resolved.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.common.provider_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing required bundle com.jiuqi.gl.common_1.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing required bundle com.jiuqi.vacomm.utils.intf_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.intf.facade_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing imported package com.jiuqi.vacomm.utils_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing imported package com.jiuqi.gov.acc.balanceForCwo.intf_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.common_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.intf.task_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.533
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.intf.message_0.0.0.
+
+!ENTRY org.eclipse.osgi 2 0 2016-05-12 21:39:27.548
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2016-05-12 21:39:27.548
+!MESSAGE Bundle com.jiuqi.gov.acc.va.portal_1.0.0 [1823] was not resolved.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing required bundle com.jiuqi.vacomm.utils.intf_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing required bundle com.jiuqi.gl.common_1.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing imported package com.jiuqi.gov.acc.balanceForCwo.intf_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.common_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.common.provider_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.intf.facade_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.intf.message_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing imported package com.jiuqi.sm.acctbook.intf.task_0.0.0.
+!SUBENTRY 2 com.jiuqi.gov.acc.va.portal 2 0 2016-05-12 21:39:27.548
+!MESSAGE Missing imported package com.jiuqi.vacomm.utils_0.0.0.

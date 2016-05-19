@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+
+<target name="com.jiuqi.dna.environment" sequenceNumber="0">
+<locations>
+<location path="D:\DA包\hbwhtDaPackage" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dbbackup" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dna" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\lib" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\thr" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\work" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dbbackup\2016-05-11_22.24.33" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dbbackup\2016-05-16_09.41.30" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dna\app" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dna\bap" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dna\component" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dna\core" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\dna\ui" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\bap" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\core" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\model" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\ui" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\bap\async_gather" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\bap\bill" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\bap\billmgr" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\bap\datastructure" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\bap\query" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\bap\workflow" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\core\db" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\core\service" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\model\workflow" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\core\db\monitor" type="Directory"/>
+<location path="D:\DA包\hbwhtDaPackage\logs\core\db\sync" type="Directory"/>
+</locations>
+</target>

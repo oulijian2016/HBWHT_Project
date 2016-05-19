@@ -5,20 +5,38 @@
 	<item value="" key="applicationName"/>
 	<item value="false" key="rcpPlugin"/>
 	<item value="false" key="apiAnalysis"/>
-	<item value="3.5" key="targetName"/>
 	<item value="false" key="osgiProject"/>
+	<item value="3.5" key="targetName"/>
 	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
 		<item value="true" key="ShowStatusLine"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
-			<item value="191" key="DIALOG_Y_ORIGIN"/>
+			<item value="67" key="DIALOG_Y_ORIGIN"/>
+			<item value="455" key="DIALOG_X_ORIGIN"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
-			<item value="669" key="DIALOG_X_ORIGIN"/>
 			<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="PluginExportWizard">
+		<item value="true" key="exportUpdate"/>
+		<item value="false" key="saveAsAnt"/>
+		<item value="" key="alias"/>
+		<item value="Generate source bundles" key="exportSourceFormat"/>
+		<item value="false" key="qualifier"/>
+		<item value="" key="password"/>
+		<item value="" key="keypass"/>
+		<item value="false" key="exportSource"/>
+		<item value="false" key="useWorkspaceCompiledClasses"/>
+		<item value="" key="keystore"/>
+		<item value="1" key="exportType"/>
+		<item value="false" key="signJAR"/>
+		<item value="C:\Users\oulijian\Desktop" key="destination1"/>
+		<item value="C:\Users\oulijian\Desktop" key="destination0"/>
+		<item value="true" key="allowBinaryCycles"/>
+		<item value="201605160937" key="qualifierName"/>
 	</section>
 	<section name="PDEFormActionManager">
 	</section>

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Portal
+Bundle-SymbolicName: com.jiuqi.hbswht.portal
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: JIUQI
+Require-Bundle: com.jiuqi.dna.ui.portal;bundle-version="2.0.0",
+ com.jiuqi.dna.ui.launch;bundle-version="2.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.jiuqi.dna.ui.funcmgr

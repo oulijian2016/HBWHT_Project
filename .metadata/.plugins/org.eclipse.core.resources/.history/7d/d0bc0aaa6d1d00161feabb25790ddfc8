@@ -1,0 +1,147 @@
+package com.jiuqi.hbswht.member.extAction;
+
+import java.sql.ResultSet;
+import java.util.List;
+
+import com.jiuqi.dna.bap.model.common.define.base.BusinessObject;
+import com.jiuqi.dna.bap.model.common.define.intf.ActionConst;
+import com.jiuqi.dna.bap.model.common.define.intf.IAction;
+import com.jiuqi.dna.bap.model.common.runtime.base.BusinessModel;
+import com.jiuqi.dna.bap.model.common.type.ModelState;
+import com.jiuqi.dna.core.Context;
+import com.jiuqi.dna.core.da.DBCommand;
+import com.jiuqi.dna.core.da.RecordSet;
+import com.jiuqi.dna.ui.common.constants.JWT;
+import com.jiuqi.dna.ui.wt.events.SelectionEvent;
+import com.jiuqi.dna.ui.wt.events.SelectionListener;
+import com.jiuqi.dna.ui.wt.widgets.MessageDialog;
+import com.jiuqi.hbswht.member.constant.WhtConstant;
+
+public class ExtDeleteRowAction implements IAction{
+
+	@Override
+	public String getGroup() {
+		// TODO Auto-generated method stub
+		return "湖北文化厅扩展";
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "ExtDeleteRowAction";
+	}
+
+	@Override
+	public String getTitle() {
+		// TODO Auto-generated method stub
+		return "删行（扩展）";
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getIcon() {
+		// TODO Auto-generated method stub
+		return ActionConst.ico_delete_row;
+	}
+
+	@Override
+	public String getShortcut() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isEnabled(BusinessModel model) {
+		int zt = (Integer) model.getModelData().getMaster().getFieldValue("WORKFLOWSTATE");
+		if( zt == 0){
+			if (model.getModelState() == ModelState.EDIT
+					|| model.getModelState() == ModelState.NEW) {
+				return true;
+			} else {
+				return false;
+			}
+		}else{
+			return false;
+		}
+	}
+
+	@Override
+	public void execute(final BusinessModel model, String param) {
+		List<BusinessObject> lists = model.getModelData().getDetailsList()
+				.get(0);
+		if (lists.size() == 0) {
+			return;
+		}else{
+			final int curCursor = model.getCursor(WhtConstant.T_ZTMBZB);
+			final String recid = model.getFieldVisitor().getGridFieldValue(WhtConstant.T_ZTMBZB, WhtConstant.F_ZTMBZB_RECID, curCursor).toString();
+			final MessageDialog resultMsg = MessageDialog.confirm("警告", "删除后，对应的目标明细将消失，是否确认删除？");
+			
+				resultMsg.addSelectionListener(new SelectionListener() {
+				
+				public void widgetSelected(SelectionEvent arg0) {
+					if(resultMsg.getReturnCode() == JWT.OK){
+						model.deleteItem(model.getITableByName(WhtConstant.T_ZTMBZB),curCursor);
+						deleteData(recid, model.getContext());
+					}
+				}
+			});
+		}
+	}
+	
+	private boolean checkExist(String recid,Context context){
+		StringBuffer sb = new StringBuffer();
+		sb.append(" define query data*()")
+		.append(" begin")
+		.append(" select t.recid from HBWHT_MBMXZB as t where t.mbsmrecid = guid '"+recid+"'")
+		.append(" end");
+		DBCommand dbc = null;
+		try{
+			dbc = context.prepareStatement(sb);
+			RecordSet rs = dbc.executeQuery();
+			
+		} catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+	
+	private void deleteData(String recid,Context context){
+		StringBuffer sb = new StringBuffer();
+		sb.append(" define delete data()")
+		.append(" begin ")
+		.append(" delete from HBWHT_MBMXZB as t where t.mbsmrecid = guid '"+recid+"'")
+		.append(" end");
+		DBCommand dbc = null;
+		try{
+			dbc = context.prepareStatement(sb);
+			dbc.executeUpdate();
+		} catch(Exception e){
+			e.printStackTrace();
+		} finally{
+			dbc.unuse();
+		}
+	}
+	
+	private void deleteDataSLZB(String recid,Context context){
+		StringBuffer sb = new StringBuffer();
+		sb.append(" define delete data()")
+		.append(" begin ")
+		.append(" delete from HBWHT_MBMXZB as t where t.mbsmrecid = guid '"+recid+"'")
+		.append(" end");
+		DBCommand dbc = null;
+		try{
+			dbc = context.prepareStatement(sb);
+			dbc.executeUpdate();
+		} catch(Exception e){
+			e.printStackTrace();
+		} finally{
+			dbc.unuse();
+		}
+	}s
+
+}

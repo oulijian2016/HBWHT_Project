@@ -1,0 +1,108 @@
+!SESSION 2016-05-19 09:46:29.269 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -dev file:D:/Project/hbwht/.metadata/.plugins/org.eclipse.pde.core/hbwht/dev.properties -os win32 -ws win32 -arch x86 -consoleLog -console
+
+!ENTRY com.jiuqi.vacomm.utils.intf 4 0 2016-05-19 09:47:49.264
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "com.jiuqi.vacomm.utils.intf_1.0.0 [1842]" could not be resolved. Reason: Missing Constraint: Require-Bundle: com.jiuqi.sm.common; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1332)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1316)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1177)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY com.jiuqi.gl.common 4 0 2016-05-19 09:47:49.266
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: The bundle "com.jiuqi.gl.common_1.0.0 [1844]" could not be resolved. Reason: Missing Constraint: Require-Bundle: com.jiuqi.vacomm.utils.intf; bundle-version="1.0.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1332)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1316)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:323)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:390)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1177)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:559)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:544)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:457)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:438)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.osgi 4 0 2016-05-19 09:47:49.272
+!MESSAGE Bundle initial@reference:file:dna/app/com.jiuqi.vacomm.utils.intf_1.0.0.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2016-05-19 09:47:49.273
+!MESSAGE Bundle initial@reference:file:dna/app/com.jiuqi.gl.common_1.0.0.jar was not resolved.
+
+!ENTRY org.eclipse.osgi 2 0 2016-05-19 09:47:49.367
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2016-05-19 09:47:49.367
+!MESSAGE Bundle initial@reference:file:dna/app/com.jiuqi.vacomm.utils.intf_1.0.0.jar was not resolved.
+!SUBENTRY 2 com.jiuqi.vacomm.utils.intf 2 0 2016-05-19 09:47:49.367
+!MESSAGE Missing required bundle com.jiuqi.sm.common_1.0.0.
+!SUBENTRY 2 com.jiuqi.vacomm.utils.intf 2 0 2016-05-19 09:47:49.368
+!MESSAGE Missing required bundle com.jiuqi.sm.unitoption.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.vacomm.utils.intf 2 0 2016-05-19 09:47:49.369
+!MESSAGE Missing required bundle com.jiuqi.vacomm.lang_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2016-05-19 09:47:49.369
+!MESSAGE Bundle initial@reference:file:dna/app/com.jiuqi.gl.common_1.0.0.jar was not resolved.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.369
+!MESSAGE Missing required bundle com.jiuqi.sm.unitoption.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.369
+!MESSAGE Missing required bundle com.jiuqi.gl.md.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.369
+!MESSAGE Missing required bundle com.jiuqi.gl.voucher.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.369
+!MESSAGE Missing required bundle com.jiuqi.gl.cm.intf_0.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.369
+!MESSAGE Missing required bundle com.jiuqi.gl.assist.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.370
+!MESSAGE Missing required bundle com.jiuqi.sm.common_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.370
+!MESSAGE Missing required bundle com.jiuqi.gl.voucher.storage_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.370
+!MESSAGE Missing required bundle com.jiuqi.gl.balanceinit.intf_1.0.0.
+
+!ENTRY org.eclipse.osgi 2 0 2016-05-19 09:47:49.373
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2016-05-19 09:47:49.373
+!MESSAGE Bundle com.jiuqi.vacomm.utils.intf_1.0.0 [1842] was not resolved.
+!SUBENTRY 2 com.jiuqi.vacomm.utils.intf 2 0 2016-05-19 09:47:49.373
+!MESSAGE Missing required bundle com.jiuqi.sm.common_1.0.0.
+!SUBENTRY 2 com.jiuqi.vacomm.utils.intf 2 0 2016-05-19 09:47:49.373
+!MESSAGE Missing required bundle com.jiuqi.sm.unitoption.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.vacomm.utils.intf 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.vacomm.lang_1.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2016-05-19 09:47:49.374
+!MESSAGE Bundle com.jiuqi.gl.common_1.0.0 [1844] was not resolved.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.vacomm.utils.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.sm.common_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.sm.unitoption.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.gl.md.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.gl.assist.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.gl.balanceinit.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.374
+!MESSAGE Missing required bundle com.jiuqi.gl.voucher.intf_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.375
+!MESSAGE Missing required bundle com.jiuqi.gl.voucher.storage_1.0.0.
+!SUBENTRY 2 com.jiuqi.gl.common 2 0 2016-05-19 09:47:49.375
+!MESSAGE Missing required bundle com.jiuqi.gl.cm.intf_0.0.0.

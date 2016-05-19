@@ -10,6 +10,8 @@ Import-Package: com.jiuqi.dna.bap.model.common.define.base,
  com.jiuqi.dna.bap.model.common.runtime.base,
  com.jiuqi.dna.bap.model.common.runtime.intf,
  com.jiuqi.dna.bap.model.common.type,
+ com.jiuqi.dna.ui.common.constants,
+ com.jiuqi.dna.ui.wt.events,
  com.jiuqi.dna.ui.wt.widgets,
  com.jiuqi.dna.workflow.define
 Require-Bundle: com.jiuqi.dna.core;bundle-version="3.6.0",

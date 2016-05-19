@@ -39,6 +39,7 @@
 		<modelActions>
 			<modelAction modelName="BusinessModel" class="com.jiuqi.hbswht.member.extAction.ExtOpenTargetDetailAction"/>
 			<modelAction modelName="BusinessModel" class="com.jiuqi.hbswht.member.extAction.ExtAgreeAction"/>
+			<modelAction modelName="BusinessModel" class="com.jiuqi.hbswht.member.extAction.ExtDeleteRowAction"/>
 		</modelActions>
 	</publish>
 </dna>
