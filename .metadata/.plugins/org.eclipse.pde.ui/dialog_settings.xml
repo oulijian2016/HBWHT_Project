@@ -5,18 +5,25 @@
 	<item value="" key="applicationName"/>
 	<item value="false" key="rcpPlugin"/>
 	<item value="false" key="apiAnalysis"/>
-	<item value="false" key="osgiProject"/>
 	<item value="3.5" key="targetName"/>
+	<item value="false" key="osgiProject"/>
 	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
 		<item value="true" key="ShowStatusLine"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="67" key="DIALOG_Y_ORIGIN"/>
-			<item value="455" key="DIALOG_X_ORIGIN"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="455" key="DIALOG_X_ORIGIN"/>
 			<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		</section>
+	</section>
+	<section name="org.eclipse.pde.ui.PLUGIN_STATUS_DIALOG">
+		<item value="656" key="DIALOG_WIDTH"/>
+		<item value="165" key="DIALOG_Y_ORIGIN"/>
+		<item value="450" key="DIALOG_HEIGHT"/>
+		<item value="451" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
@@ -35,8 +42,8 @@
 		<item value="false" key="signJAR"/>
 		<item value="C:\Users\oulijian\Desktop" key="destination1"/>
 		<item value="C:\Users\oulijian\Desktop" key="destination0"/>
-		<item value="true" key="allowBinaryCycles"/>
 		<item value="201605160937" key="qualifierName"/>
+		<item value="true" key="allowBinaryCycles"/>
 	</section>
 	<section name="PDEFormActionManager">
 	</section>

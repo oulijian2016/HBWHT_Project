@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="572" localization="OSGI-INF/l10n/bundle" name="Portal" project="com.jiuqi.gov.acc.va.portal" provider="JIUQI"/>
+	<bundle bundleID="570" localization="OSGI-INF/l10n/bundle" name="Portal" project="com.jiuqi.hbswht.portal" provider="JIUQI"/>
+	<bundle bundleID="571" localization="OSGI-INF/l10n/bundle" name="Member" project="com.jiuqi.hbswht.member" provider="JIUQI"/>
+</map>
